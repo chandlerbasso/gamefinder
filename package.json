@@ -1,0 +1,27 @@
+{
+  "name": "gamefinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandlerbasso/gamefinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chandlerbasso/gamefinder/issues"
+  },
+  "homepage": "https://github.com/chandlerbasso/gamefinder#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.10.0",
+    "path": "^0.12.7",
+    "router": "^1.1.4"
+  }
+}
