@@ -1,18 +1,25 @@
-const express     = require('express')
-const path        = require('path')
-const logger      = require('morgan')
-const bodyparser  = require('body-parser')
-const app         = express()
-const port        = process.env.PORT || 3000
+'use strict'
 
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
+const env        = process.env.NODE_ENV || 'development'
+const DEV        = env==='development'
+const dotenv     = require('dotenv').config()
 
-app.use(express.static(path.join(__dirname, 'public')))
+const express    = require('express')
+const morgan     = require('morgan')
+const path       = require('path')
+const bodyparser = require('body-parser')
+const app        = express()
 
-app.use(logger('dev'))
+const port       = process.env.PORT || 3000
+
+app.set('superSecret', 'my super secret word')
+
+app.use(morgan( DEV ? 'dev' : 'common'))
+
+app.use(express.static(path.join(__dirname,'dist')))
+
 app.use(bodyparser.json())
 
-app.listen(port, function(){
-  console.log('youre up an runnin on ' + port )
+app.listen(port,()=>{
+  console.log('server up on', port)
 })

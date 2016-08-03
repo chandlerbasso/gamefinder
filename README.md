@@ -49,7 +49,7 @@ Giant Bomb
 -Node<br>
 -mongo<br>
 -EJS<br>
-
+-React
 ##Sources
 http://www.giantbomb.com/api/documentation
 
