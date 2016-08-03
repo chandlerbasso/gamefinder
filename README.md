@@ -53,5 +53,10 @@ Giant Bomb
 ##Sources
 http://www.giantbomb.com/api/documentation
 
-
+##Nice to have
+-A commenting feature where users can write their own reviews, possibly have other users comment on their comments<br>
+-A more in depth user profile page where they can upload a profile picture view their comments and view the comments other people have put in their comments<br>
+-A "im feeling lucky" button that gives you info on a random game<br>
+-add a link on already released games to retailers websites that have the game<br>
+-a "find on steam" button for computer games
 
