@@ -1,8 +1,9 @@
 DROP TABLE if EXISTS games;
 
 CREATE TABLE games (
-  game_id SERIAL unique PRIMARY KEY,
-  name VARCHAR(50) NOT NULL,
-  description VARCHAR(144) NOT NULL,
-  article_link TEXT
+  main_id SERIAL unique PRIMARY KEY,
+  game_id TEXT NOT NULL UNIQUE,
+  game_name VARCHAR(144),
+  game_desc TEXT,
+  game_image TEXT
 )

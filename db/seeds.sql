@@ -1,4 +1,4 @@
-INSERT INTO games(name, description, article_link)
+INSERT INTO games(game_id, game_name, game_desc, game_image)
 VALUES
-('Halo', 'best fucking game ever', 'literally anywhere on the internet'),
-('Call of duty', 'was great until 2009', 'dont bother');
+(1234, 'best fucking game ever', 'literally anywhere on the internet', 'idklk'),
+(5678, 'was great until 2009', 'dont bother', 'idklk');

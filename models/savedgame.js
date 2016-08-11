@@ -15,9 +15,9 @@ module.exports = {
   addGame(req,res,next){
     console.log('===', req.body)
     _db.one(
-      `INSERT INTO games (name, description)
-      VALUES ($1,$2)
-      returning *;`, [req.body.name, req.body.description]
+      `INSERT INTO games (game_id, game_name, game_desc, game_image)
+      VALUES ($/game_id/,$/game_name/,$/game_desc/, $/game_image/)
+      returning *;`, req.body
       )
     .then(games => {
       console.log('ADDED game successfully');
@@ -29,17 +29,17 @@ module.exports = {
     })
   },
   deleteGame(req,res,next){
-    let game_id = req.params.gameId
+    // let main_id = req.params.gameId
     _db.none(
       `DELETE FROM games
-      WHERE game_id = $1;`, [game_id]
+      WHERE game_name = $1;`, [req.body.item]
       )
     .then(()=>{
-      console.log('DELETED succesfully', game_id);
+      console.log('DELETED succesfully', req.body);
       next()
     })
     .catch(error => {
-      console.error('*****ERROR IN DELETE ITEM*****')
+      console.error('*****ERROR IN DELETE ITEM*****', error)
     })
   }
 }
