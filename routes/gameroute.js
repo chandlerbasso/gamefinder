@@ -5,7 +5,7 @@ const db      = require('../models/savedgame')
 const sendJSONresp = (req,res)=>res.json(res.rows)
 
 
-game.route('/:gameId')
+game.route('/')
     .delete(db.deleteGame, (req,res) => res.send( req.params.gameId))
 
 game.route('/')
