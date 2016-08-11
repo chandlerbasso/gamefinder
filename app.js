@@ -20,7 +20,7 @@ app.use(morgan( DEV ? 'dev' : 'common'))
 app.use(express.static(path.join(__dirname,'dist')))
 
 app.use(bodyparser.json())
-app.use(bodyparser.urlencoded(true))
+app.use(bodyparser.urlencoded({extended: true}))
 
 app.use('/game', gameroute)
 
