@@ -97,7 +97,7 @@ export default class GameResults extends React.Component {
       }
       else if(this.props.lucky === true){
         return(
-            <div className="container">
+            <div className="container col-centered text-center">
                <a href='/'><p>Home</p></a>
                 <div className="col-md-6 col-centered text-center" key='1'>
                   <h3>{this.props.games.name}</h3>
